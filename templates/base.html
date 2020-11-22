@@ -12,20 +12,21 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
-      <a class="navbar-brand" href="#">Foth.com</a>
+      <a class="navbar-brand" href="{% url 'show_landing_page' %}">Foth.com</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link disabled" href="#">Über mich</a>
+            <a class="navbar-link text-light" href="#">Über mich</a>
+          </li>
+          <li>
+            <a class="px-md-4 navbar-link text-light" href="{% url 'show_articles' %}">Bücherrezensionen</a>
           </li>
         </ul>
-        <div><a class="navbar-link text-light" href="#">Kontakt</a>
-        </div>
-        <div class="px-md-4"><a class="navbar-link text-light" href="#">Verbesserungsvorschläge</a>
-        </div>
+        <div><a class="navbar-link text-light" href="#">Kontakt</a></div>
+        <div class="px-md-4"><a class="navbar-link text-light" href="#">Verbesserungsvorschläge</a></div>
       </div>
     </div>
   </nav>

@@ -1,4 +1,11 @@
 {% extends 'base.html' %}
 {% block content %}
-HalloTest1234
+{% for review in book_reviews %}
+
+{{ review.book_title }}
+{{ review.book_tags }}
+{{ review.review_content }}
+{{ review.article_date }}
+
+{% endfor %}
 {% endblock %}

@@ -2,10 +2,16 @@
 {% block content %}
 {% for review in book_reviews %}
 
-{{ review.book_title }}
-{{ review.book_tags }}
-{{ review.review_content }}
-{{ review.article_date }}
+    <div class="card" style="width: 20rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{ review.book_title }}</h5>
+            <h6 class="card-subtitle text-muted">{{ review.book_tags }} | {{ review.article_date }}</h6>
+            <div class="dropdown-divider"></div>
+        <div class="card-body">
+            <a href=""><button type="button" class="btn btn-success">Weiterlesen</button></a>
+        </div>
+    </div>
 
 {% endfor %}
 {% endblock %}

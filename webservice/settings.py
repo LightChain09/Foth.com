@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'book_reviews.apps.BookReviewsConfig',
     'landing_page.apps.LandingPageConfig',
+    'thoughts.apps.ThoughtsConfig',
 ]
 
 

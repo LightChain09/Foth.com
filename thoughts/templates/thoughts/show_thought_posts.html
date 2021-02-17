@@ -1,4 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
-Thoughts Page
+Thoughts Page <br>
+
+{% for article in articles %}
+
+    {{ article.title }}<br>
+    {{ article.article_content }}
+    
+{% endfor %}
 {% endblock content %}

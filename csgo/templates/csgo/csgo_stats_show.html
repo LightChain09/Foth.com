@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<table class="table table-bordered table-hover" style="background-color: rgb(79, 81, 87); color: black;">
+    <thead style="background-color: rgb(155, 153, 153);">
+        <tr>
+            <th scope="col" style="width:50px;"><div align="center">#</div></th>
+            <th scope="col">Name</th>
+            <th scope="col">Elo</th>
+            <th scope="col" style="width:120px;">Rang</th>
+        </tr>
+    </thead>
+    <tbody style="font-size: 19px; color: rgb(221, 214, 214)">
+
+        {% for player_object in player_data %}
+        {% if forloop.counter == 1 %}
+        <tr style="background-color: rgba(255, 217, 0, 0.37)">
+        {% endif %}
+        {% if forloop.counter == 2 %}
+        <tr style="background-color: rgba(192, 192, 192, 0.37)">
+        {% endif %}
+        {% if forloop.counter == 3 %}
+        <tr style="background-color: #bf897054">
+        {% endif %}
+        {% if forloop.counter > 3 %}
+        <tr>
+        {% endif %}
+        
+            <th><div align="center">{{ forloop.counter }}</div></th>
+            <td>{{ player_object.name }}</td>
+            <td>{{ player_object.elo }}</td>
+
+            <style>
+                rank_cell {margin:-7px;}
+            </style>
+            {% if forloop.first %}
+            <td><img src="{% static 'csgo/niko.png' %}" width="100px"></td>
+            {% elif forloop.last %}
+            <td><img src="{% static 'csgo/schublade.png' %}" width="100px"></td>
+            {% elif player_object.elo > 1625 %}
+            <td><img src="{% static 'csgo/omega.png' %}" width="100px"></td>
+            {% elif player_object.elo > 1575 %}
+            <td><img src="{% static 'csgo/alpha.png' %}" width="100px"></td>
+            {% elif player_object.elo > 1525 %}
+            <td><img src="{% static 'csgo/beta.png' %}" width="100px"></td>
+            {% elif player_object.elo > 1450 %}
+            <td><img src="{% static 'csgo/gamma.png' %}" width="100px"></td>
+            {% elif player_object.elo > 1350 %}
+            <td><img src="{% static 'csgo/beep_boop.png' %}" width="100px"></td>
+            {% elif player_object.elo > 1200 %}
+            <td><img src="{% static 'csgo/bots.png' %}" width="100px"></td>
+            {% endif %}
+    
+        </tr>
+
+        {% endfor %}
+
+    </tbody>
+</table>
+
+{% endblock content %}

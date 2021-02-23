@@ -22,4 +22,5 @@ urlpatterns = [
     path('', include("landing_page.urls"), name="landing_page"),
     path('book_reviews/', include("book_reviews.urls"), name="book_reviews"),
     path('thoughts/', include("thoughts.urls"), name="thoughts"),
+    path('csgo/', include("csgo.urls"), name="csgo"),
 ]

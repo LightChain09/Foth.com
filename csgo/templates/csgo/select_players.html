@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+
+    {% for field in selectform %}
+    {% for player in field %}
+
+        {{ player }}
+
+            
+    {% endfor %}
+    {% endfor %}
+
+    <br>
+    <input type="submit" value="Generieren">
+</form>
+{% endblock content %}

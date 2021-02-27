@@ -26,7 +26,7 @@ SECRET_KEY = '+z5at85^&w-uhp7z!6u!+^9+a6a(pm5=r^riudju&$$32t6l5_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ["207.154.246.228", "foth.dev", "localhost"]
+ALLOWED_HOSTS = ["207.154.246.228", "foth.dev", "www.foth.dev", "localhost"]
 
 
 # Application definition

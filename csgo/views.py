@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import CsgoPlayer
 from .forms import SelectPlayers
 from .generate_team import generate
+from django.contrib import messages
 
 def show_csgo_stats(request):
     
@@ -25,10 +26,18 @@ def select_players(request):
 
             for item in queryset:
                 player_dict[item.name] = item.elo
+
+            if len(player_dict) >= 4:
             
-            team_a, team_b = generate(player_dict)
-        
-        return render(request, "csgo/show_teams.html", {"team_a": team_a, "team_b": team_b})
+                team_a, team_b = generate(player_dict)
+            
+                return render(request, "csgo/show_teams.html", {"team_a": team_a, "team_b": team_b})
+            
+            else:
+
+                messages.warning(request, "Bitte wählen Sie mindestens 4 Spieler aus!")
+                
+                return redirect("select_players")
 
     else:
 

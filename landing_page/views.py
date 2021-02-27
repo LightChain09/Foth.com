@@ -16,8 +16,5 @@ def show_landing_page(request):
 
     age = calculate_age(datetime.datetime(year=2002, month=9, day=3, hour=14))
 
-    
-    
-
-
     return render(request, 'landing_page/index.html', {"age": age})
+

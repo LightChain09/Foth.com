@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'landing_page.apps.LandingPageConfig',
     'thoughts.apps.ThoughtsConfig',
-    'csgo.apps.CsgoConfig'
+    'csgo.apps.CsgoConfig',
+    'static_sites.apps.StaticSitesConfig'
 ]
 
 

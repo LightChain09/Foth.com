@@ -8,7 +8,16 @@ def show_csgo_stats(request):
     
     player_data = CsgoPlayer.objects.order_by("-elo")
 
-    return render(request, "csgo/show_csgo_stats.html", {"player_data": player_data})
+    player_list_ranked = []
+    player_list_unranked = []
+
+    for player in player_data:
+        if player.playes_matches >= 10:
+            player_list_ranked.append(player)
+        else:
+            player_list_unranked.append(player)
+
+    return render(request, "csgo/show_csgo_stats.html", {"player_data_ranked": player_list_ranked, "player_data_unranked": player_list_unranked})
 
 def select_players(request):
 

@@ -15,14 +15,14 @@ server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 server.bind(ADDR)
 
 
-def retrieve_elo_from_database(name_list):
+def retrieve_elo_from_database(steam_id_list):
     con = sqlite3.connect("db.sqlite3")
     cursor = con.cursor()
     elo_list = []
-    for name in name_list:
+    for steam_id in steam_id_list:
 
         for row in cursor.execute("SELECT * from csgo_csgoplayer"):
-            if row[1] == name:
+            if row[7] == steam_id:
                 elo_list.append(row[2])
                 break
     
@@ -35,7 +35,7 @@ def store_info_in_database(stats):
     cursor = con.cursor()
     
     for player in stats:
-        current_stats = cursor.execute(f"SELECT * from csgo_csgoplayer WHERE name = '{player}'")
+        current_stats = cursor.execute(f"SELECT * from csgo_csgoplayer WHERE steam_id = '{player}'")
 
         played_matches = 1
 
@@ -45,11 +45,11 @@ def store_info_in_database(stats):
             stats[player][3] += row[5]
             played_matches += row[6]
 
-        cursor.execute(f"UPDATE csgo_csgoplayer SET elo = {stats[player][0]} WHERE name = '{player}'")
-        cursor.execute(f"UPDATE csgo_csgoplayer SET kills = {stats[player][1]} WHERE name = '{player}'")
-        cursor.execute(f"UPDATE csgo_csgoplayer SET assists = {stats[player][2]} WHERE name = '{player}'")
-        cursor.execute(f"UPDATE csgo_csgoplayer SET deaths = {stats[player][3]} WHERE name = '{player}'")
-        cursor.execute(f"UPDATE csgo_csgoplayer SET playes_matches = {played_matches} WHERE name = '{player}'")
+        cursor.execute(f"UPDATE csgo_csgoplayer SET elo = {stats[player][0]} WHERE steam_id = '{player}'")
+        cursor.execute(f"UPDATE csgo_csgoplayer SET kills = {stats[player][1]} WHERE steam_id = '{player}'")
+        cursor.execute(f"UPDATE csgo_csgoplayer SET assists = {stats[player][2]} WHERE steam_id = '{player}'")
+        cursor.execute(f"UPDATE csgo_csgoplayer SET deaths = {stats[player][3]} WHERE steam_id = '{player}'")
+        cursor.execute(f"UPDATE csgo_csgoplayer SET played_matches = {played_matches} WHERE steam_id = '{player}'")
 
     con.commit()
     con.close()
@@ -95,8 +95,8 @@ def handle_client(conn, addr):
 
         print(msg)
 
-        name_list = msg.split("/")
-        elo_list = retrieve_elo_from_database(name_list)
+        steam_id_list = msg.split("/")
+        elo_list = retrieve_elo_from_database(steam_id_list)
 
         elo_string = parse_old_elo(elo_list)
 

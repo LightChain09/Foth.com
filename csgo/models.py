@@ -8,7 +8,7 @@ class CsgoPlayer(models.Model):
     assists = models.IntegerField(default=0)
     deaths = models.IntegerField(default=0)
 
-    playes_matches = models.IntegerField(default=0)
+    played_matches = models.IntegerField(default=0)
 
     def __str__(self):
         return f"{self.name}"

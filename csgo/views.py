@@ -12,7 +12,7 @@ def show_csgo_stats(request):
     player_list_unranked = []
 
     for player in player_data:
-        if player.playes_matches >= 10:
+        if player.played_matches >= 10:
             player_list_ranked.append(player)
         else:
             player_list_unranked.append(player)
@@ -53,3 +53,10 @@ def select_players(request):
         selectform = SelectPlayers()
         
         return render(request, "csgo/select_players.html", {"selectform": selectform})
+
+
+def player_profile(request, steam_id):
+
+    player_details = CsgoPlayer.objects.get(steam_id=steam_id)
+
+    return render(request, 'csgo/player_profile.html', {"player": player_details})

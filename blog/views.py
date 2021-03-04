@@ -8,8 +8,8 @@ def show_blog_posts(request):
     return render(request, "blog/show_blog_posts.html", {"articles": articles})
 
 
-def post_detail(request, title):
+def post_detail(request, id):
 
-    article = BlogArticle.objects.get(title=title)
+    article = BlogArticle.objects.get(id=id)
 
     return render(request, "blog/post_detail.html", {"article": article})

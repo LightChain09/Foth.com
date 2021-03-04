@@ -2,3 +2,4 @@ nohup.out
 *.pyc
 *.pyo
 nohup.out
+.vscode/*

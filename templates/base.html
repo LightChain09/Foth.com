@@ -27,13 +27,13 @@
             <a class="px-md-3 navbar-link text-light" href="#">Über mich</a>
           </li>
           <li>
-            <a class="px-md-3 navbar-link text-light" href="{% url 'show_blog_posts' %}">Gedanken</a>
+            <a class="px-md-3 navbar-link text-light" href="{% url 'show_blog_posts' %}">Blog</a>
           </li>
           <li>
             <a class="px-md-3 navbar-link text-light" href="{% url 'show_csgo_stats' %}">CS:GO</a>
           </li>
         </ul>
-        <div class="px-md-4"><a class="navbar-link text-light" href="#">Verbesserungsvorschläge</a></div>
+        <div class="px-md-4"><a class="navbar-link text-light" href="{% url 'show_suggestions' %}">Verbesserungsvorschläge</a></div>
         <div><a class="navbar-link text-light" href="#">Kontakt</a></div>
       </div>
     </div>

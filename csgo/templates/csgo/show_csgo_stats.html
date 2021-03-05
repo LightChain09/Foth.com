@@ -29,7 +29,7 @@
         {% endif %}
         
             <th><div align="center">{{ forloop.counter }}</div></th>
-            <td>{{ player_object.name }}</td>
+            <td><a href="{{ player_object.steam_id }}"><div style="text-decoration: none; color: white;">{{ player_object.name }}</div></a></td>
             <td>{{ player_object.elo }}</td>
 
             <style>
@@ -75,7 +75,7 @@
         <tr>
         
             <th><div align="center">{{ forloop.counter }}</div></th>
-            <td>{{ player_object.name }}</td>
+            <td><a href="{{ player_object.steam_id }}"><div style="text-decoration: none; color: white;">{{ player_object.name }}</div></a></td>
             <td>{{ player_object.played_matches }}</td>
     
         </tr>

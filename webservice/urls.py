@@ -22,4 +22,5 @@ urlpatterns = [
     path('', include("static_sites.urls"), name="static-sites"),
     path('csgo/', include("csgo.urls"), name="csgo"),
     path('blog/', include("blog.urls"), name="blog"),
+    path('suggestions/', include("suggestions.urls"), name="suggestions")
 ]

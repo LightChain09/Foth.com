@@ -22,9 +22,3 @@ def registerUser(request):
         form = UserCreationForm()
         return render(request, "users/registerUser.html", {"form": form})
 
-def loginUser(request):
-    return HttpResponse(request, "hello")
-
-
-def logoutUser(request):
-    return HttpResponse(request, "hello")

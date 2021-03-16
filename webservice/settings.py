@@ -131,3 +131,6 @@ STATICFILES_DIRS = (
     )
 
 STATIC_ROOT = "/static/"
+
+
+LOGIN_REDIRECT_URL = "show_landing_page"

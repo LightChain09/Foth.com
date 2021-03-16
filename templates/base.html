@@ -33,9 +33,19 @@
             <a class="px-md-3 navbar-link text-light" href="{% url 'show_csgo_stats' %}">CS:GO</a>
           </li>
         </ul>
-        <div class="px-md-4"><a class="navbar-link text-light" href="{% url 'show_suggestions' %}">Verbesserungsvorschläge</a></div>
         {% if user.is_authenticated %}
-        <div><a class="navbar-link text-light" href="#">{{ user.username }}</a></div>
+        <div class="px-md-4"><a class="navbar-link text-light" href="{% url 'show_suggestions' %}">Verbesserungsvorschläge</a></div>
+        <div class="dropdown">
+          <a class="btn " href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white">
+            {{ user.username }}
+          </a>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" href="{% url 'logout' %}">Ausloggen</a>
+          </div>
+        </div>
+        {% else %}
+        <div class="px-md-4"><a class="navbar-link text-light" href="{% url 'login' %}">Login</a></div>
+        <div class="px-md-4"><a class="navbar-link text-light" href="{% url 'register' %}">Registrieren</a></div>
         {% endif %}
       </div>
     </div>

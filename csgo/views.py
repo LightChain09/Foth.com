@@ -17,7 +17,11 @@ def show_csgo_stats(request):
         else:
             player_list_unranked.append(player)
 
-    return render(request, "csgo/show_csgo_stats.html", {"player_data_ranked": player_list_ranked, "player_data_unranked": player_list_unranked})
+    unranked_matches_for_rank = [10-int(player.played_matches) for player in player_list_unranked]
+
+    player_data_unranked = zip(player_list_unranked, unranked_matches_for_rank)
+
+    return render(request, "csgo/show_csgo_stats.html", {"player_data_ranked": player_list_ranked, "player_data_unranked": player_data_unranked, "unranked_matches": unranked_matches_for_rank})
 
 def select_players(request):
 

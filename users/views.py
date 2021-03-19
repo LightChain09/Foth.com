@@ -14,7 +14,7 @@ def registerUser(request):
             messages.success(request, "Account wurde erfolgreich erstellt.")
             return redirect("login")
         else:
-            messages.error(request, "fuck")
+            messages.error(request, "Ein Fehler ist aufgetreten...")
             return redirect("registerUser")
 
     else:

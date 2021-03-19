@@ -65,18 +65,18 @@
         <tr>
             <th scope="col" style="width:50px;"><div align="center">#</div></th>
             <th scope="col">Name</th>
-            <th scope="col" style="width:40.3%">Gespielte Matches</th>
+            <th scope="col" style="width:40.3%">Noch zu spielende Matches</th>
         </tr>
     </thead>
     <tbody style="font-size: 19px; color: rgb(221, 214, 214)">
 
-        {% for player_object in player_data_unranked %}
+        {% for player_object, placement_matches in player_data_unranked %}
        
         <tr>
         
             <th><div align="center">{{ forloop.counter }}</div></th>
             <td><a href="{{ player_object.steam_id }}"><div style="display: inline-block; text-decoration: none; color: white;">{{ player_object.name }}</div></a></td>
-            <td>{{ player_object.played_matches }}</td>
+            <td>{{ placement_matches }}</td>
     
         </tr>
 

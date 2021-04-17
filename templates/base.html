@@ -40,6 +40,7 @@
             {{ user.username }}
           </a>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <a class="dropdown-item" href="{% url 'userProfile' %}">Profil</a>
             <a class="dropdown-item" href="{% url 'logout' %}">Ausloggen</a>
           </div>
         </div>

@@ -6,6 +6,26 @@ body {
   line-height: 20px;
 }
 
+table {
+  border-collapse: collapse;
+  border-radius: 1em;
+  overflow: hidden;
+  box-shadow: 4px 4px 4px 4px #2c2f35;
+  margin: 10px;
+  text-decoration: none;
+}
+
+th, td {
+  padding: 1em;
+  background-color: rgb(100, 100, 100);
+  border-bottom: 1px solid rgb(197, 197, 197);
+  border: 1px solid rgb(197, 197, 197);
+}
+
+td {
+  text-decoration: none;
+}
+
 .body {
   font-family: Lato, sans-serif;
   color: #fff;
@@ -222,10 +242,6 @@ body {
   position: relative;
   min-height: 100vh;
   padding-bottom: 150px;
-}
-
-.tabs {
-  text-align: center;
 }
 
 .utility-page-wrap {

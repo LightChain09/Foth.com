@@ -24,7 +24,9 @@
               <div class="w-col w-col-3">
                 <div class="csgo-text-block-3">Elo</div>
               </div>
-              <div class="w-col w-col-3">Rang</div>
+              <div class="w-col w-col-3">
+                <div class="csgo-text-block-3">Rang</div>
+              </div>
             </div>
           </div>
 
@@ -54,7 +56,27 @@
               <div class="w-col w-col-3">
                 <div class="csgo-text-block-3">{{ player_object.elo }}</div>
               </div>
-              <div class="w-col w-col-3">Rang</div>
+              <div class="w-col w-col-3">
+
+                {% if forloop.first %}
+                <img src="{% static 'csgo/niko.png' %}" class="csgo-rank-img">
+                {% elif forloop.last %}
+                <img src="{% static 'csgo/schublade.png' %}" class="csgo-rank-img">
+                {% elif player_object.elo > 1625 %}
+                <img src="{% static 'csgo/omega.png' %}" class="csgo-rank-img">
+                {% elif player_object.elo > 1575 %}
+                <img src="{% static 'csgo/alpha.png' %}" class="csgo-rank-img">
+                {% elif player_object.elo > 1525 %}
+                <img src="{% static 'csgo/beta.png' %}" class="csgo-rank-img">
+                {% elif player_object.elo > 1450 %}
+                <img src="{% static 'csgo/gamma.png' %}" class="csgo-rank-img">
+                {% elif player_object.elo > 1350 %}
+                <img src="{% static 'csgo/beep_boop.png' %}" class="csgo-rank-img">
+                {% elif player_object.elo > 1200 %}
+                <img src="{% static 'csgo/bots.png' %}" class="csgo-rank-img">
+                {% endif %}
+
+              </div>
             </div>
           </div>
 

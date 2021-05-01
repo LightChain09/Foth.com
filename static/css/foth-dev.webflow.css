@@ -6,6 +6,26 @@ body {
   line-height: 20px;
 }
 
+table {
+  border-collapse: collapse;
+  border-radius: 1em;
+  overflow: hidden;
+  box-shadow: 4px 4px 4px 4px #2c2f35;
+  margin: 10px;
+  text-decoration: none;
+}
+
+th, td {
+  padding: 1em;
+  background-color: rgb(100, 100, 100);
+  border-bottom: 1px solid rgb(197, 197, 197);
+  border: 1px solid rgb(197, 197, 197);
+}
+
+td {
+  text-decoration: none;
+}
+
 .body {
   font-family: Lato, sans-serif;
   color: #fff;
@@ -218,14 +238,10 @@ body {
 }
 
 .section {
-  margin-bottom: 56px;
+  margin-bottom: 0px;
   position: relative;
   min-height: 100vh;
   padding-bottom: 150px;
-}
-
-.tabs {
-  text-align: center;
 }
 
 .utility-page-wrap {
@@ -285,6 +301,45 @@ body {
   border: 0px solid #000;
 }
 
+.csgo-text-block {
+  position: static;
+  top: 0px;
+  bottom: 0px;
+  padding-top: 30px;
+  font-size: 15px;
+}
+
+.csgo-text-block-2 {
+  padding-top: 30px;
+  font-size: 16px;
+}
+
+.csgo-text-block-3 {
+  padding-top: 30px;
+}
+
+.columns {
+  text-align: center;
+}
+
+.csgo-columns-2 {
+  position: relative;
+  border-bottom: 1px solid #fff;
+  border-radius: 0px;
+  background-color: hsla(237, 0%, 46%, 0.11);
+  -webkit-transition: -webkit-transform 200ms ease;
+  transition: -webkit-transform 200ms ease;
+  transition: transform 200ms ease;
+  transition: transform 200ms ease, -webkit-transform 200ms ease;
+}
+
+.csgo-columns-2:hover {
+  background-color: rgba(255, 255, 255, 0.11);
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
 @media screen and (max-width: 991px) {
   .footer {
     padding-right: 20px;
@@ -295,11 +350,6 @@ body {
 @media screen and (max-width: 767px) {
   .footer {
     padding: 40px 20px;
-  }
-
-  .footer-image {
-    -o-object-fit: contain;
-    object-fit: contain;
   }
 }
 

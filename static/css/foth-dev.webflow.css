@@ -340,6 +340,11 @@ td {
   transform: scale(1.05);
 }
 
+.csgo-rank-img {
+  width: 100px;
+  margin-top: 5px;
+}
+
 @media screen and (max-width: 991px) {
   .footer {
     padding-right: 20px;

@@ -1,14 +1,29 @@
 {% extends 'base_new.html' %}
 {% block content %}
 
-{% for article in articles %}
-<div class="card" style="background-color:rgb(65, 70, 73);">
-    <div class="card-body">
-        <div class="card-title">{{ article.title }}</div>
-        <div class="card-subtitle">{{ article.publish_date }}</div>
-        <a href="{{ article.id }}" class="btn btn-success">Weiterlesen</a>
-    </div>
-</div>
-{% endfor %}
+
+<div class="w-container">
+    <h1 class="heading">Blog</h1>
+    <ul role="list" class="w-list-unstyled">
+
+    {% for article in articles %}
+
+      <li class="bloglistitem">
+        <h3 class="blogheading">{{ article.title }}</h3>
+        <div class="blogintroduction">{{ article.introduction }}</div>
+        <div class="w-row">
+          <div class="w-col w-col-6">
+            <a href="#" class="blogbutton w-button">Artikel lesen</a>
+          </div>
+          <div class="blogdatecolumn w-col w-col-6">
+            <h5 class="blogdate">{{ article.publish_date }}</h5>
+          </div>
+        </div>
+      </li>
+
+    {% endfor %}
+
+    </ul>
+  </div>
 
 {% endblock content %}

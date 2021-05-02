@@ -134,3 +134,5 @@ STATIC_ROOT = "/static/"
 
 
 LOGIN_REDIRECT_URL = "show_landing_page"
+
+DEFAULT_AUTO_FIELD='django.db.models.AutoField'

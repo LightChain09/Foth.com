@@ -395,6 +395,10 @@ td {
   margin-bottom: 20px;
 }
 
+.startpage-blog-intro {
+  padding-bottom: 20px;
+}
+
 
 @media screen and (max-width: 991px) {
   .footer {

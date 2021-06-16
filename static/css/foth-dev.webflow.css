@@ -399,6 +399,44 @@ td {
   padding-bottom: 20px;
 }
 
+.timeline {
+  width: 80%;
+  height: 5px;
+  background-color: rgba(255, 255, 255, 0.39);
+  border-radius: 10px;
+}
+
+.timeline-dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #3898ec;
+  margin-left: 20%;
+  position: relative;
+  top: -5px;
+}
+
+.timeline-dot-1 {
+  margin-left: 20%;
+}
+
+.timeline-dot-2 {
+  margin-left: 40%;
+  position: relative;
+  top: -20px;
+}
+
+.timeline-dot-3 {
+  margin-left: 60%;
+  position: relative;
+  top: -35px;
+}
+
+.timeline-dot-4 {
+  margin-left: 80%;
+  position: relative;
+  top: -50px;
+}
 
 @media screen and (max-width: 991px) {
   .footer {

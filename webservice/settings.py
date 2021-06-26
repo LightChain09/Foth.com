@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'static_sites.apps.StaticSitesConfig',
     'blog.apps.BlogConfig',
     'suggestions.apps.SuggestionsConfig',
-    'users.apps.UsersConfig'
+    'users.apps.UsersConfig',
+    'poker.apps.PokerConfig'
 ]
 
 

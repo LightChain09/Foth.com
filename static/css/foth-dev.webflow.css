@@ -404,6 +404,8 @@ td {
   height: 5px;
   background-color: rgba(255, 255, 255, 0.39);
   border-radius: 10px;
+  margin-top: 60px;
+  margin-bottom: 15px;
 }
 
 .timeline-dot {
@@ -436,6 +438,32 @@ td {
   margin-left: 80%;
   position: relative;
   top: -50px;
+}
+
+.timeline-text-1 {
+  margin-left: 19%;
+}
+
+.timeline-text-2 {
+  margin-left: 39%;
+  position: relative;
+  top: -15px;
+}
+
+.timeline-text-3 {
+  margin-left: 59%;
+  position: relative;
+  top: -30px;
+}
+
+.timeline-text-4 {
+  margin-left: 79%;
+  position: relative;
+  top: -45px;
+}
+
+.timeline-dot-lowlight {
+  background-color: #3898ec5b;
 }
 
 @media screen and (max-width: 991px) {

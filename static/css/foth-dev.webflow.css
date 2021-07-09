@@ -404,12 +404,12 @@ td {
 }
 
 .timeline {
-  width: 80%;
+  width: 100%;
   height: 5px;
   background-color: rgba(255, 255, 255, 0.39);
   border-radius: 10px;
-  margin-top: 60px;
-  margin-bottom: 15px;
+  margin-top: 15px;
+  margin-bottom: 30px;
 }
 
 .timeline-dot {
@@ -468,6 +468,18 @@ td {
 
 .timeline-dot-lowlight {
   background-color: #3898ec5b;
+}
+
+.paragraph-block {
+  text-align: justify;
+}
+
+.about-h2 {
+  margin-top: 60px;
+}
+
+.about-container {
+  margin-bottom: 50px;
 }
 
 @media screen and (max-width: 991px) {

@@ -40,8 +40,6 @@ INSTALLED_APPS = [
     'csgo.apps.CsgoConfig',
     'static_sites.apps.StaticSitesConfig',
     'blog.apps.BlogConfig',
-    'suggestions.apps.SuggestionsConfig',
-    'users.apps.UsersConfig',
     'poker.apps.PokerConfig'
 ]
 
@@ -69,6 +67,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'static_sites.context_processors.weather_processor',
             ],
         },
     },

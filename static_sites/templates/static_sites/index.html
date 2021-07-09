@@ -1,25 +1,33 @@
 {% extends 'base_new.html' %}
 {% block content %}
-    <div class="w-container">
+    <div class="container">
         <h1 class="heading">Foth.dev</h1>
-        <div class="w-row">
-        <div class="column w-col w-col-6">
+        <div class="row">
+        <div class="column col col-6">
             <h2>Programmierung</h2>
             <p class="paragraph">
                 Seit nun mehr als 6 Jahren beschäftige ich mich in meiner Freizeit mit dem Thema Programmierung. In der Zwischenzeit habe
                 ich Erfahrungen mit diversen Sprachen und Technologien gemacht. Spezialisiert habe ich auf die Entwicklung von Websites,
                 insbesondere das Backend dieser, und Algorithmen.
             </p>
-            <a href="#" class="button w-button">Mehr zur Programmierung</a>
+            <a href="#" class="button button">Mehr zur Programmierung</a>
         </div>
-        <div class="column-2 w-col w-col-6">
+        <div class="column-2 col col-6">
             <h2>Blog</h2>
             <p class="paragraph startpage-blog-intro">
                 Meine Gedanken zu den Themen IT, (Netz-)Politik und Philosophie fasse ich hier in kurzen Blogartikeln zusammen. Sollten Sie interessiert
                 sein oder möchten Sie sich über die Themen und meine Meinungen austauschen, lade ich Sie dazu ein mir zu schreiben.
             </p>
-            <a href="{% url 'show_blog_posts' %}" class="button w-button">Zum Blog</a>
+            <a href="#" class="button button">Zum Blog</a>
         </div>
+        </div>
+        <div class="row" style="margin-top:30px">
+            <h2>Diese Website befindet sich noch im Aufbau</h2>
+            <p class="paragraph">
+                Ich programmiere diese Website von Grundauf und möchte dies auch vernünftig machen. Die Zeit um an solchen Nebenprojekten zu arbeiten ist
+                begrenzt, allerdings arbeite ich gerade daran sie fertig zu stellen. Während der Aufbauphase ist das Countrstrike und Poker Ranking allerdings
+                trotzdem funktionstüchtig und über die Links unten auf der Website zu erreichen. 
+            </p>
         </div>
     </div>
 {% endblock content %}

@@ -60,12 +60,12 @@ td {
 }
 
 .container {
-  background-color: #4b4f58;
+  background-color: #373a41;
   color: #fff;
 }
 
-.container.navbar {
-  background-color: #434750;
+.container-navbar {
+  background-color: #4b4f58;
   color: #fff;
   font-weight: 400;
 }
@@ -187,6 +187,10 @@ td {
 
 .footer-container {
   text-align: center;
+}
+
+.footer-container.container{
+  background-color: #333;
 }
 
 .div-block {
@@ -400,10 +404,12 @@ td {
 }
 
 .timeline {
-  width: 80%;
+  width: 100%;
   height: 5px;
   background-color: rgba(255, 255, 255, 0.39);
   border-radius: 10px;
+  margin-top: 15px;
+  margin-bottom: 30px;
 }
 
 .timeline-dot {
@@ -436,6 +442,51 @@ td {
   margin-left: 80%;
   position: relative;
   top: -50px;
+}
+
+.timeline-text-1 {
+  margin-left: 19%;
+}
+
+.timeline-text-2 {
+  margin-left: 39%;
+  position: relative;
+  top: -15px;
+}
+
+.timeline-text-3 {
+  margin-left: 59%;
+  position: relative;
+  top: -30px;
+}
+
+.timeline-text-4 {
+  margin-left: 79%;
+  position: relative;
+  top: -45px;
+}
+
+.timeline-dot-lowlight {
+  background-color: #3898ec5b;
+}
+
+.paragraph-block {
+  text-align: justify;
+}
+
+.about-h2 {
+  margin-top: 60px;
+}
+
+.about-container {
+  margin-bottom: 50px;
+}
+
+.nav-weather {
+  position: absolute; 
+  top: 0px; 
+  left: 80%; 
+  color: white;
 }
 
 @media screen and (max-width: 991px) {

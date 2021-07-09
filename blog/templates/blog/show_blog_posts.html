@@ -2,20 +2,20 @@
 {% block content %}
 
 
-<div class="w-container">
+<div class="container">
     <h1 class="heading">Blog</h1>
-    <ul role="list" class="w-list-unstyled">
+    <ul role="list" class="list-unstyled">
 
     {% for article in articles %}
 
       <li class="bloglistitem">
         <h3 class="blogheading">{{ article.title }}</h3>
         <div class="blogintroduction">{{ article.introduction }}</div>
-        <div class="w-row">
-          <div class="w-col w-col-6">
-            <a href="#" class="blogbutton w-button">Artikel lesen</a>
+        <div class="row">
+          <div class="col col-6">
+            <a href="#" class="blogbutton button">Artikel lesen</a>
           </div>
-          <div class="blogdatecolumn w-col w-col-6">
+          <div class="blogdatecolumn col col-6">
             <h5 class="blogdate">{{ article.publish_date }}</h5>
           </div>
         </div>

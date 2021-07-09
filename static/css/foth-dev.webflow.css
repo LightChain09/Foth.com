@@ -482,6 +482,13 @@ td {
   margin-bottom: 50px;
 }
 
+.nav-weather {
+  position: absolute; 
+  top: 0px; 
+  left: 80%; 
+  color: white;
+}
+
 @media screen and (max-width: 991px) {
   .footer {
     padding-right: 20px;

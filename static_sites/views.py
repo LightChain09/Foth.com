@@ -7,9 +7,7 @@ def calculate_age(birth):
 
     days = difference.days
 
-    years = days / 365
-    
-    return years
+    return days / 365
 
 
 def show_legal_page(request):
@@ -17,12 +15,9 @@ def show_legal_page(request):
 
 
 def show_about_page(request):
-    return render(request, 'static_sites/about.html')
+    age = calculate_age(datetime.datetime(year=2002, month=9, day=3, hour=14))
+    return render(request, 'static_sites/about.html', {"age": age})
 
 
 def show_landing_page(request):
-    age = calculate_age(datetime.datetime(year=2002, month=9, day=3, hour=14))
-
-    user = request.user
-
-    return render(request, 'static_sites/index.html', {"age": age, "user": user})
+    return render(request, 'static_sites/index.html')

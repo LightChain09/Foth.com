@@ -30,6 +30,7 @@
           <div class="icon-nav-menu"></div>
         </div>
       </div>
+      <div class="nav-link nav-weather"> <img src="{% static 'weather/'|add:icon|add:'.png'' %}" width="30px;"></img> {{ temperature }}°C, {{ city }}, {{ country }}</div>
     </div>
 
   {% block content %}

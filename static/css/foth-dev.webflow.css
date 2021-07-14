@@ -409,7 +409,7 @@ td {
   background-color: rgba(255, 255, 255, 0.39);
   border-radius: 10px;
   margin-top: 15px;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
 }
 
 .timeline-dot {
@@ -420,6 +420,8 @@ td {
   margin-left: 20%;
   position: relative;
   top: -5px;
+  cursor: pointer;
+  transition: background-color 0.5s;
 }
 
 .timeline-dot-1 {
@@ -444,26 +446,29 @@ td {
   top: -50px;
 }
 
+.timeline-text {
+  position: relative;
+  transition: color 0.5s;
+}
+
 .timeline-text-1 {
   margin-left: 19%;
+  top: -50px;
 }
 
 .timeline-text-2 {
   margin-left: 39%;
-  position: relative;
-  top: -15px;
+  top: -70px;
 }
 
 .timeline-text-3 {
   margin-left: 59%;
-  position: relative;
-  top: -30px;
+  top: -90px;
 }
 
 .timeline-text-4 {
   margin-left: 79%;
-  position: relative;
-  top: -45px;
+  top: -110px;
 }
 
 .timeline-dot-lowlight {

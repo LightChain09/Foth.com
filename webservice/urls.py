@@ -15,7 +15,6 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.contrib.auth import views as authViews
 
 
 urlpatterns = [
@@ -23,5 +22,4 @@ urlpatterns = [
     path('', include("static_sites.urls"), name="static-sites"),
     path('csgo/', include("csgo.urls"), name="csgo"),
     path('poker/', include("poker.urls"), name="poker"),
-    path('blog/', include("blog.urls"), name="blog"),
 ]

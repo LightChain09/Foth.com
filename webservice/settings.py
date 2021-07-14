@@ -39,7 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'csgo.apps.CsgoConfig',
     'static_sites.apps.StaticSitesConfig',
-    'blog.apps.BlogConfig',
     'poker.apps.PokerConfig'
 ]
 

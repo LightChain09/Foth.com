@@ -11,3 +11,7 @@ def show_about_page(request):
 
 def show_landing_page(request):
     return render(request, 'static_sites/index.html')
+
+
+def show_projects_page(request):
+    return render(request, 'static_sites/projects.html')

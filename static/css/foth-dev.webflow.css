@@ -501,7 +501,7 @@ td {
   border-radius: 5%;
   background-color: rgba(255, 255, 255, .15);  
   backdrop-filter: blur(5px);
-  color: rgb(59, 59, 59);
+  color: rgb(255, 255, 255);
 }
 
 .project-title {
@@ -534,7 +534,6 @@ td {
   margin-top: 75px;
   margin-left: calc(50% - 170px/2);
   border-radius: 10%;
-  background-color: white;
 }
 
 .project-button {

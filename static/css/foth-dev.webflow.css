@@ -357,50 +357,12 @@ td {
   margin-top: 5px;
 }
 
-.blogbutton {
-  border: 2px solid #3898ec;
-  border-radius: 20px;
-  background-color: rgba(56, 152, 236, 0);
-  -webkit-transition: border-color 200ms ease, -webkit-transform 200ms ease;
-  transition: border-color 200ms ease, -webkit-transform 200ms ease;
-  transition: transform 200ms ease, border-color 200ms ease;
-  transition: transform 200ms ease, border-color 200ms ease, -webkit-transform 200ms ease;
-  color: #fff;
-  font-size: 15px;
-  font-weight: 700;
-}
-
-.blogbutton:hover {
-  border-color: #c0030d;
-  -webkit-transform: scale(1.05);
-  -ms-transform: scale(1.05);
-  transform: scale(1.05);
-}
-
-.bloglistitem {
-  margin-bottom: 20px;
-  padding: 0px 20px 20px;
-  border-style: solid;
-  border-width: 2px;
-  border-color: #5e5e5e00;
-  border-radius: 20px;
-  box-shadow: 1px 1px 5px -1px #000;
-}
-
-.blogdate {
-  padding-top: 0px;
-}
-
-.blogdatecolumn {
-  text-align: right;
-}
-
-.blogintroduction {
-  margin-bottom: 20px;
-}
-
-.startpage-blog-intro {
-  padding-bottom: 20px;
+.startpage-intro {
+  min-height: 7rem;
+  max-height: 7rem;
+  max-width: 70ch;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 
 .timeline {

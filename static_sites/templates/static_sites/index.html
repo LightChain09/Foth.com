@@ -1,33 +1,42 @@
 {% extends 'base_new.html' %}
+{% load static %}
 {% block content %}
+<style>
+    .body {
+        background: url("{% static 'backgrounds/landing.jpg' %}");
+    }
+    .container {
+        background-color: rgba(0, 0, 0, 0);
+        
+    }
+    .holder {
+        backdrop-filter: blur(5px);
+        max-width: 75ch;
+        border-radius: 5%;
+        background-color: rgba(255, 255, 255, .15);  
+        margin-top: 5rem;
+    }
+</style>
     <div class="container">
-        <h1 class="heading">Foth.dev</h1>
-        <div class="row">
-        <div class="column col col-6">
-            <h2>Programmierung</h2>
-            <p class="paragraph">
-                Seit nun mehr als 6 Jahren beschäftige ich mich in meiner Freizeit mit dem Thema Programmierung, welchen ich Erfahrungen mit
-                diversen Sprachen und Technologien gemacht habe. Spezialisiert habe ich auf die Entwicklung von Algorithmen und Websites,
-                insbesondere das Backend dieser.
-            </p>
-            <a href="#" class="button button">Mehr zur Programmierung</a>
-        </div>
-        <div class="column-2 col col-6">
-            <h2>Blog</h2>
-            <p class="paragraph startpage-blog-intro">
-                Meine Gedanken zu den Themen IT, (Netz-)Politik und Philosophie fasse ich hier in kurzen Blogartikeln zusammen. Sollten Sie interessiert
-                sein oder möchten Sie sich über die Themen und meine Meinungen austauschen, lade ich Sie dazu ein mir zu schreiben.
-            </p>
-            <a href="#" class="button button">Zum Blog</a>
-        </div>
-        </div>
-        <div class="row" style="margin-top:30px">
-            <h2>Diese Website befindet sich noch im Aufbau</h2>
-            <p class="paragraph">
-                Ich programmiere diese Website von Grundauf und möchte dies auch vernünftig machen. Die Zeit um an solchen Nebenprojekten zu arbeiten ist
-                begrenzt, allerdings arbeite ich gerade daran sie fertig zu stellen. Während der Aufbauphase ist das Counterstrike und Poker Ranking allerdings
-                trotzdem funktionstüchtig und über die Links unten auf der Website zu erreichen. 
-            </p>
+        <div class="holder">
+            <div class="row">
+                <h1>Foth.dev</h1>
+                <h2>Projekte</h2>
+                <p class="paragraph startpage-intro">
+                    Seit nun mehr als 6 Jahren beschäftige ich mich in meiner Freizeit mit dem Thema Programmierung, welchen ich Erfahrungen mit
+                    diversen Sprachen und Technologien gemacht habe. Spezialisiert habe ich auf die Entwicklung von Algorithmen und Websites,
+                    insbesondere das Backend dieser.
+                </p>
+                <a href="{% url 'show_projects_page' %}" class="button button">Mehr zur Programmierung</a>
+            </div>
+            <div class="row" style="margin-top:30px">
+                <h2>Diese Website befindet sich noch im Aufbau</h2>
+                <p class="paragraph startpage-intro">
+                    Ich programmiere diese Website von Grundauf und möchte dies auch vernünftig machen. Die Zeit um an solchen Nebenprojekten zu arbeiten ist
+                    begrenzt, allerdings arbeite ich gerade daran sie fertig zu stellen. Während der Aufbauphase ist das Counterstrike und Poker Ranking allerdings
+                    trotzdem funktionstüchtig und über die Links unten auf der Website zu erreichen. 
+                </p>
+            </div>
         </div>
     </div>
 {% endblock content %}

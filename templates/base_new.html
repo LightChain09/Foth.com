@@ -22,9 +22,8 @@
       <div class="container container-navbar">
         <a href="{% url 'show_landing_page' %}" class="nav-brand"><img src="{% static 'logo.png' %}" width="80px" class="image-5"></a>
         <nav role="navigation" class="nav-menu">
-          <a href="#" class="navbar-link nav-link">Über mich</a>
-          <a href="#" class="navbar-link nav-link">Programmierung</a>
-          <a href="#" class="navbar-link nav-link">Blog</a>
+          <a href="{% url 'show_about_page' %}" class="navbar-link nav-link">Über mich</a>
+          <a href="{% url 'show_projects_page' %}" class="navbar-link nav-link">Projekte</a>
         </nav>
         <div class="nav-button">
           <div class="icon-nav-menu"></div>

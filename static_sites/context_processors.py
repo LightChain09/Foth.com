@@ -14,6 +14,10 @@ def weather_processor(request):
     humidity = json_response["data"]["current"]["weather"]["hu"]
     icon = json_response["data"]["current"]["weather"]["ic"]
 
+    icon_list = [char for char in icon]
+    icon_list[2] = "d"
+    icon = "".join(icon_list)
+    
     return {
         "city": city,
         "state": state,

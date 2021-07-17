@@ -1,0 +1,45 @@
+{% extends "base_new.html" %}
+{% load static %}
+{% block content %}
+
+<style>
+.body {
+    background: url("{% static 'backgrounds/projects.jpg' %}");
+    background-attachment: fixed;
+    background-size: cover;
+}
+.container {
+    background-color: transparent;
+}
+</style>
+
+<div class="container">
+    <div class="row">
+        <div class="column col col-4">
+            <div class="project-card">
+                <div class="project-title">CS:GO Melon</div>
+                <div class="project-desc">CS:GO MELON is an elo calculation tool for Counterstrike: Global Offensive using Valve's Gamestate Integration.</div>
+                <div class="project-image"></div>
+                <div class="button project-button">Mehr</div>
+            </div>
+        </div>
+        <div class="column col col-4">
+            <div class="project-card">
+                <div class="project-title">Foth.dev Website</div>
+                <div class="project-desc"></div>
+                <div class="project-image"></div>
+                <div class="button project-button">Mehr</div>
+            </div>
+        </div>
+        <div class="column col col-4">
+            <div class="project-card">
+                <div class="project-title">NSA Discord Bot</div>
+                <div class="project-desc">Ein Discord Bot um die fehlenden logging Möglichkeiten von Discord zu beheben.</div>
+                <div class="project-image"></div>
+                <div class="button project-button">Mehr</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -7,4 +7,5 @@ urlpatterns=[
     path('about/', views.show_about_page, name="show_about_page"),
     path('legal/', views.show_legal_page, name="show_legal_page"),
     path('projects/', views.show_projects_page, name="show_projects_page"),
+    path('admin-login/', views.AdminLogin.as_view(), name="show_admin_login"),
 ]

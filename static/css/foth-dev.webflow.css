@@ -357,11 +357,15 @@ td {
 }
 
 .startpage-intro {
-  min-height: 7rem;
   max-height: 7rem;
   max-width: 70ch;
-  margin-bottom: 0;
   margin-top: 0;
+}
+
+.startpage-button {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  margin-right: 1rem;
 }
 
 .timeline {

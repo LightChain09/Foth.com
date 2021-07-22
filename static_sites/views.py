@@ -19,3 +19,7 @@ def show_projects_page(request):
 
 class AdminLogin(LoginView):
     template_name = 'static_sites/admin_login.html'
+
+
+def show_example_pages(request):
+    return render(request, 'static_sites/example_pages.html')
